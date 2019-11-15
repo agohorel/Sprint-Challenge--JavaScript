@@ -30,13 +30,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+* `map` iterates over an array performing a given callback on each item in the array, the results of which are pushed into a **new array**, while `forEach` **does not** return a new array. In other words, they both iterate over an array performing a callback, but `forEach` **can** mutate the original array while `map` **cannot** mutate the original array.
+
 2. What is the difference between a function and a method?
+
+* A method is a function assigned as a property on an object, while a regular old function can "live" independently of a parent object.
 
 3. What is closure?
 
+* Put simply, a closure occurs when an inner function has access to variables from an outside scope.
+
 4. Describe the four rules of the 'this' keyword.
 
+- *if a function is declared in the global scope, "this" refers to the window/global object.*
+
+- *if a method is invoked, "this" refers to the object that owns the method (i.e. "left of the dot" rule)*
+
+- *if "new" is used to create an instance of an object, "this" refers to that specific instance*
+
+- *if using call/apply/bind, "this" refers to whatever object you specify within the arguments explicitly*
+
 5. Why do we need super() in an extended class?
+
+* `super()` is used to create a subclass via the parent's constrctor to inherit
+characteristics/properties from the parent. It takes the place of `.call()` in pre-ES6 prototypal inheritance.
 
 ## Project Set up
 
